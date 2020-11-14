@@ -1,11 +1,7 @@
 import { Location } from '@angular/common';
-<<<<<<< HEAD
-import { Component, OnInit } from '@angular/core';
 import { NavigationService } from '../services/navigation.service';
-=======
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Geolocation } from '@ionic-native/geolocation';
->>>>>>> 5f58841bd6290bbc6837d00a27e2540635f34ed1
 
 declare var google: any;
 @Component({
@@ -29,7 +25,7 @@ export class EmergencyPagePage  {
 }
 
 plotLocationOnMap(latitude, longitube){
-  this.map = new google.maps.Map(this.myMap.nativeElement ,{
+  this.map = new google.maps.Map(document.getElementById("map") ,{
   center: { lat: latitude, lng: longitube },
   zoom: 19,
  //
