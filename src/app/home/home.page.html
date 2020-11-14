@@ -13,18 +13,17 @@
     </ion-toolbar>
   </ion-header>
 
-<div *ngIf="!showAlertTypes">
-  <label>Student Nunber</label>
-  <label>Name</label>
-  <label>Surname</label>
-<button (click)="alert">Alert for Me</button>
-</div>
-<div *ngIf="showAlertTypes">
-  <button>Security Officer</button>
-  <button>Ambulance</button>
-</div>
+
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <div *ngIf="!showAlertTypes">
+      <label>Student Number</label>
+      <label>Name</label>
+      <label>Surname</label>
+    <button (click)="alert()">Alert for Me</button>
+    </div>
+    <div *ngIf="showAlertTypes">
+      <button>Security Officer</button>
+      <button>Ambulance</button>
+    </div>
   </div>
 </ion-content>
