@@ -1,5 +1,6 @@
 import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { NavigationService } from '../services/navigation.service';
 
 declare var  google: any;
 @Component({
@@ -10,7 +11,8 @@ declare var  google: any;
 export class EmergencyPagePage  {
   map:any;
   constructor(
-    private location: Location
+    private location: Location,
+    private navigation: NavigationService
   ) { }
 
   ionViewWillEnter () {
@@ -21,7 +23,8 @@ export class EmergencyPagePage  {
   });}
 
   back(){
-    this.location.back();
+   // this.location.back();
+   this.navigation.navigateHome();
   }
     
   }
