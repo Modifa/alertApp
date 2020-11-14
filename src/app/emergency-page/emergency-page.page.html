@@ -5,8 +5,11 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-<div id="map" style="height:100">
+<div #map id="map" style="height:50%" [ngStyle]="{'height': isLoading ? '0%' : '50%'}">
 
+</div>
+<div *ngIf="isLoading" class="m-10 loader flex fx-jc-center fx-ai-center" >
+  <ion-spinner strokeWidth="3"></ion-spinner>
 </div>
 <ion-button (click)="back()">Back</ion-button>
 </ion-content>
