@@ -10,7 +10,6 @@ export class HomePage implements OnInit {
   
   constructor() {}
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
   }
   alert(){
     this.showAlertTypes = true;
