@@ -12,6 +12,7 @@ export class HomePage {
   constructor(
     private navigation: NavigationService
   ) {}
+  
   ionViewWillEnter () {
     this.showAlertTypes = false;
   }

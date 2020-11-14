@@ -9,11 +9,11 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'emergency-page',
+    redirectTo: 'emergencies',
     pathMatch: 'full'
   },
   {
-    path: 'emergency-page',
+    path: 'emergencies',
     loadChildren: () => import('./emergency-page/emergency-page.module').then( m => m.EmergencyPagePageModule)
   },
 ];

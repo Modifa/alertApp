@@ -15,16 +15,16 @@
 
 
   <div id="container">
-    <div *ngIf="!showAlertTypes">
+    <div *ngIf="!showAlertTypes" class="flex fx-col">
       <label>Student Number</label>
       <label>Name</label>
       <label>Surname</label>
-    <button (click)="alert()">Alert for Me</button>
+    <ion-button (click)="alert()">Alert for Me</ion-button>
     </div>
      // AIzaSyCVud3OE_3QTMPD1V9d-3K1SdkRJ_aDG2A
     <div *ngIf="showAlertTypes">
-      <button (click)="getEmergencyServices()">Security Officer</button>
-      <button (click)="getEmergencyServices()">Ambulance</button>
+      <ion-button (click)="getEmergencyServices()">Security Officer</ion-button>
+      <ion-button (click)="getEmergencyServices()">Ambulance</ion-button>
     </div>
   </div>
 </ion-content>
