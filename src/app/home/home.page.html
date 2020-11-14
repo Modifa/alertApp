@@ -22,8 +22,8 @@
     <button (click)="alert()">Alert for Me</button>
     </div>
     <div *ngIf="showAlertTypes">
-      <button>Security Officer</button>
-      <button>Ambulance</button>
+      <button (click)="getEmergencyServices()">Security Officer</button>
+      <button (click)="getEmergencyServices()">Ambulance</button>
     </div>
   </div>
 </ion-content>
