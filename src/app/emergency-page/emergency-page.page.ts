@@ -57,6 +57,8 @@ setupCoordinates(){
       this.longitude = resp.coords.longitude
       this.plotLocationOnMap(this.latitube,this.longitude)
       console.warn("resp.coords.longitude",resp.coords.longitude);
+      console.warn("resp.coords.latitute",resp.coords.latitude);
+
     }
    }).catch((error) => {
      console.log('Error getting location', error);
