@@ -2,6 +2,8 @@ import { Location } from '@angular/common';
 import { NavigationService } from '../services/navigation.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Geolocation } from '@ionic-native/geolocation';
+import { MediaCapture, MediaFile } from '@ionic-native/media-capture/ngx';
+import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 
 declare var google: any;
 @Component({
@@ -17,7 +19,9 @@ export class EmergencyPagePage  {
   @ViewChild('map') myMap;
   constructor(
     private location: Location,
-    private navigation: NavigationService
+    private navigation: NavigationService,
+    public mediaCapture:MediaCapture,
+    public socialSharing:SocialSharing,
   ) { }
 
   ionViewWillEnter () {
@@ -63,6 +67,39 @@ setupCoordinates(){
   back(){
    // this.location.back();
    this.navigation.navigateHome();
+  }
+  
+  CaptureAudio(){
+    this.mediaCapture.captureAudio().then((audio:MediaFile[])=>{
+      // this.ShareMedia("audio file","media capture", audio[0].fullPath,"");
+    },(err)=>{
+       alert(JSON.stringify(err));
+    })
+  }
+//
+  CaptureVideo(){
+    this.mediaCapture.captureVideo().then((video:MediaFile[])=>{
+      // this.ShareMedia("video file","media capture", video[0].fullPath,"");
+    },(err)=>{
+       alert(JSON.stringify(err));
+    })
+  }
+//
+  CaptureImage(){
+    this.mediaCapture.captureImage().then((image:MediaFile[])=>{
+      // this.ShareMedia("video image","media capture", image[0].fullPath,"");
+    },(err)=>{
+       alert(JSON.stringify(err));
+    })
+  }
+//
+  ShareMedia(message, subject, filepath, url){
+    this.socialSharing.share(message, subject,filepath, url).then(()=>{
+
+    },(err)=>{
+      alert(JSON.stringify(err));
+    });
+
   }
     
   }

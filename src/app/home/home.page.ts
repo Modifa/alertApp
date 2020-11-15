@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationService } from '../services/navigation.service';
+import { MediaCapture, MediaFile } from '@ionic-native/media-capture/ngx';
+import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 
 @Component({
   selector: 'app-home',
@@ -22,4 +24,8 @@ export class HomePage {
   getEmergencyServices(){
     this.navigation.navigateToEmergency();
   }
+  getAmbulance(){
+    this.navigation.natigateToAmbulance();
+  }
+//
 }

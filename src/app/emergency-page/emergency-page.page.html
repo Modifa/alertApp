@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>emergencyPage</ion-title>
+    <ion-fab-button  (click)="back()">Back</ion-fab-button>
   </ion-toolbar>
 </ion-header>
 
@@ -8,5 +8,9 @@
 <div id="map" style="height:100px">
 
 </div>
-<ion-fab-button  (click)="back()">Back</ion-fab-button>
-</ion-content>
+
+<div>
+  <ion-button (click)="CaptureAudio()" size="small">Audio</ion-button>
+  <ion-button (click)="CaptureImage()" size="small" color="secondary">Video</ion-button>
+  <ion-button (click)="CaptureVideo()" size="small" color="tertiary">Image</ion-button>
+</div>

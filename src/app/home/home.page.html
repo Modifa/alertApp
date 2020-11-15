@@ -19,12 +19,17 @@
       <label>Student Number</label>
       <label>Name</label>
       <label>Surname</label>
-    <ion-button (click)="alert()">Alert for Me</ion-button>
+    <ion-button expand="block" (click)="alert()">Alert for Me</ion-button>
     </div>
 
     <div *ngIf="showAlertTypes">
-      <ion-button (click)="getEmergencyServices()">Security Officer</ion-button>
-      <ion-button (click)="getEmergencyServices()">Ambulance</ion-button>
+      <ion-button color="danger" (click)="getEmergencyServices()">Security </ion-button>
+      <ion-button color="warning" (click)="getAmbulance()">Ambulance</ion-button>
     </div>
   </div>
 </ion-content>
+
+<!-- 
+<ion-button color="success">Success</ion-button>
+<ion-button color="warning">Warning</ion-button>
+<ion-button color="danger">Danger</ion-button> -->

@@ -8,6 +8,7 @@ export class NavigationService {
 
   public home = "home";
   public emergencies = "emergencies"
+  public ambulance = "ambulance"
   constructor(
     private router: Router
   ) { }
@@ -22,5 +23,8 @@ export class NavigationService {
   
   public navigateHome = function() {
     this.navigate(this.home);
+  }
+  public natigateToAmbulance = function(){
+    this.navigate(this.ambulance);
   }
 }
