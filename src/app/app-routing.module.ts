@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'emergencies',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
@@ -20,6 +20,11 @@ const routes: Routes = [
     path: 'ambulance',
     loadChildren: () => import('./ambulance-page/ambulance-page.module').then( m => m.AmbulancePagePageModule)
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+
 
 ];
 
